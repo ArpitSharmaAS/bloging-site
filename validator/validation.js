@@ -1,4 +1,4 @@
-const { model } = require("mongoose")
+
 
 const isempty = (value)=>{
     if(typeof value === "undefined" || value === null ){
@@ -21,7 +21,7 @@ const isValidEmail = (value)=>{
 }
 
 const isValidPassword = (value)=>{
-    const passwordRegex = /^(?=.\d)(?=.[!@#$%^&])(?=.[a-z])(?=.*[A-Z]).{8,}$/;
+    const passwordRegex = /^(?=.[A-Z])(?=.[a-z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
     return passwordRegex.test(value)
 }
-module.exports = {isempty}
+module.exports = {isempty, isValidName, isValidEmail, isValidPassword}

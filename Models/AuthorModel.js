@@ -12,7 +12,7 @@ const authorschema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        enum: [Mr, Mrs, Miss]
+        enum: ["Mr", "Mrs", "Miss"]
     },
     email: {
         type: String,
@@ -24,5 +24,4 @@ const authorschema = new mongoose.Schema({
         required: true
     }
 },{timestamps: true})
-
-module.exports = mongouse.model("author", authorschema)
+module.exports = mongoose.model("author", authorschema)
